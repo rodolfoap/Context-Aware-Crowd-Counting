@@ -32,12 +32,13 @@ Second, following the instructions of the original document, run the procedure. 
 ## Preparing the dataset
 
 ```
-$ pushd dataset
-
+$ cd dataset
 $ tar xvfz dataset/ShanghaiTech_CrowdCountingDataset.tz
 
-$ popd
+$ cd ../model
+$ tar xvfz part_B_pre.pth.tz
 
+$ cd ..
 $ ./cli.bash
 
 root@13d8d9df96d1:/workspace# python make_dataset.py
