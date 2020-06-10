@@ -10,7 +10,15 @@ The application runs within a docker container. Therefore, the only installed re
 
 This repository should contain all elements required to run the application (model, datasets), since they are stored within by means of git-lfs.
 
-First, build the container:
+## Get the container
+
+First, pull the container from dockerhub:
+
+```
+$ docker pull rodolfoap/pytorch:0.4.1-20200610
+```
+
+Or you can just build the container:
 
 ```
 $ cd docker/
@@ -40,7 +48,7 @@ $ tar xvfz dataset/ShanghaiTech_CrowdCountingDataset.tz
 $ cd ../model
 $ tar xvfz part_B_pre.pth.tz
 
-$ cd ..
+$ cd ../docker
 $ ./cli.bash
 
 root@13d8d9df96d1:/workspace# python make_dataset.py
