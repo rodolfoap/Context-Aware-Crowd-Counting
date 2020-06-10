@@ -1,6 +1,7 @@
 dataset/ShanghaiTech_CrowdCountingDataset/
 dataset/Venice/
-*.pyc
-*.pth
 train.json
 val.json
+*.pyc
+*.pth
+*.tar

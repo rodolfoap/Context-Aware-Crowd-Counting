@@ -31,6 +31,8 @@ Second, following the instructions of the original document, run the procedure. 
 
 ## Preparing the dataset
 
+* Before launching, check the memory that's assigned to the docker container in `cli.bash` and the `batch_size` variable in train.py. _YMMV_, you need to play with those variables in order to improve your performance.
+
 ```
 $ cd dataset
 $ tar xvfz dataset/ShanghaiTech_CrowdCountingDataset.tz
