@@ -10,4 +10,5 @@ docker run 						\
 	--device=/dev/video0:/dev/video0:rwm 		\
 	--name pytorch					\
 	--entrypoint=/bin/bash 				\
+	-m=10g 						\
 	rodolfoap/pytorch:0.4.1-$(date +%Y%m%d)

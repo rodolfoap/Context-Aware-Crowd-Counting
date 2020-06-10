@@ -13,19 +13,18 @@ from image import *
 root=''
 
 part_B_train = os.path.join(root,'dataset/ShanghaiTech_CrowdCountingDataset/part_B_final/train_data','images')
-part_B_test = os.path.join(root,'dataset/ShanghaiTech_CrowdCountingDataset/part_B_final/test_data','images')
-path_sets = [part_B_train,part_B_test]
+part_B_test  = os.path.join(root,'dataset/ShanghaiTech_CrowdCountingDataset/part_B_final/test_data' ,'images')
+path_sets=[part_B_train,part_B_test]
 
-
-img_paths  = []
+img_paths = []
 for path in path_sets:
     for img_path in glob.glob(os.path.join(path, '*.jpg')):
         img_paths.append(img_path)
 
-for  img_path  in img_paths:
+for img_path in img_paths:
     print img_path
     mat = io.loadmat(img_path.replace('.jpg','.mat').replace('images','ground_truth').replace('IMG_','GT_IMG_'))
-    img= plt.imread(img_path)
+    img=plt.imread(img_path)
     k = np.zeros((img.shape[0],img.shape[1]))
     gt = mat["image_info"][0,0][0,0][0]
     for i in range(0,len(gt)):
