@@ -1,0 +1,5 @@
+dataset/ShanghaiTech_CrowdCountingDataset/
+dataset/Venice/
+*.pyc
+*.pth
+img.json
